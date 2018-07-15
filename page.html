@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Work Book | Auth</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">Find Job</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">Add Job</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">Settings</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">Board</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">View Map</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">Get In</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">We couldnt find jobs in this specific page. Our automatic job detection system is improving everyday! For now you can add a job through the <b>ADD JOB</b> form manually.</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">Board Type</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>My First Board</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">Job Type</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Wishlist</li>
+                            <li>Rejected</li>
+                            <li>Applied</li>
+                            <li>Interview</li>
+                            <li>Offer</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="Company Name">
+                <input type="text" name="mj_jobtit" placeholder="Job Title">
+                <input type="text" name="mj_loc" placeholder="Location">
+                <input type="text" name="mj_url" placeholder="Post URL">
+                <textarea name="mj_desc" placeholder="Job Description"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">Save Job</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>Job Added</h3></div>
+        <div class="suw-desc">Your Jobe has been successfully added ! </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">Go Back</button><a href="" class="check-link">Check out your Dashboard !</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> Goto User Board</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> Logout</a>
+        </div>
+    </div>
+</div>
+
+<!--********************************************************************8-->
+                              <!--English End-->
+<!--********************************************************************8-->
+
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">找工作</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">添加工作</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">設置</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">板</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">查看地圖</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">進入</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">我們在這個特定的頁面找不到工作。我們的自動職位檢測系統每天都在改進！現在，您可以手動通過 <b> 添加工作 </b>表單添加作業。</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">板類型
+</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>我的第一個董事會</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">工作類型</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>收藏</li>
+                            <li>拒絕</li>
+                            <li>應用的</li>
+                            <li>訪問</li>
+                            <li>提供</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="公司名">
+                <input type="text" name="mj_jobtit" placeholder="職稱">
+                <input type="text" name="mj_loc" placeholder="位置">
+                <input type="text" name="mj_url" placeholder="發佈網址">
+                <textarea name="mj_desc" placeholder="職位描述"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">保存工作</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>作業已添加</h3></div>
+        <div class="suw-desc">你的工作已經成功添加！ </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">回去</button><a href="" class="check-link">看看你的儀表板！</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> 轉到用戶板</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> 登出</a>
+        </div>
+    </div>
+</div>
+
+<!--********************************************************************8-->
+                              <!--Chinese End-->
+<!--********************************************************************8-->
+
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">नौकरी ढूंढो</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">नौकरी जोड़ें</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">सेटिंग्स</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">मंडल</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">मानचित्र</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">अंदर आओ</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">हम इस विशिष्ट पेज में नौकरी नहीं पा सके हमारी स्वचालित नौकरी खोज प्रणाली हर रोज़ में सुधार कर रही है! अभी के लिए आप मैन्युअल रूप से <b> जोड़ें नौकरी </ b> फ़ॉर्म के माध्यम से एक नौकरी जोड़ सकते हैं</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">बोर्ड का प्रकार</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>मेरा पहला बोर्ड</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">कार्य का प्रकार</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>इच्छा-सूची</li>
+                            <li>अस्वीकृत</li>
+                            <li>आवेदन किया है</li>
+                            <li>साक्षात्कार</li>
+                            <li>प्रस्ताव</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="कंपनी का नाम">
+                <input type="text" name="mj_jobtit" placeholder="नौकरी का नाम">
+                <input type="text" name="mj_loc" placeholder="स्थान">
+                <input type="text" name="mj_url" placeholder="URL पोस्ट करें">
+                <textarea name="mj_desc" placeholder="नौकरी का विवरण"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">नौकरी सहेजें</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>नौकरी जोड़ा गया</h3></div>
+        <div class="suw-desc">आपका जॉब सफलतापूर्वक जोड़ा गया है! </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">Go Back</button><a href="" class="check-link">अपने डैशबोर्ड की जांच करें!</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> गोटो यूजर बोर्ड</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> लोग आउट</a>
+        </div>
+    </div>
+</div>
+
+<!--********************************************************************8-->
+                              <!--Hindi End-->
+<!--********************************************************************8-->
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">Encuentra trabajo</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">Agregar trabajo</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">Configuraciones</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">Tablero</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">Ver el mapa</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">Entra</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">No pudimos encontrar trabajos en esta página específica. ¡Nuestro sistema automático de detección de trabajos está mejorando todos los días! Por ahora puede agregar un trabajo manualmente a través del formulario <b> AÑADIR TRABAJO </b>.</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">Tipo de placa</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Mi primer tablero</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">Tipo de empleo</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Deseados</li>
+                            <li>Rechazado</li>
+                            <li>Aplicado</li>
+                            <li>Entrevista</li>
+                            <li>Oferta</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="nombre de empresa">
+                <input type="text" name="mj_jobtit" placeholder="Título profesional">
+                <input type="text" name="mj_loc" placeholder="Ubicación">
+                <input type="text" name="mj_url" placeholder="Publicar URL">
+                <textarea name="mj_desc" placeholder="Descripción del trabajo"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">Guardar trabajo</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>Trabajo agregado</h3></div>
+        <div class="suw-desc">Tu Jobe se ha agregado con éxito! </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">Go Back</button><a href="" class="check-link">¡Mira tu Tablero!</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> Ir a la Junta de usuarios</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> Cerrar sesión</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!--********************************************************************8-->
+                              <!--Spanish End-->
+<!--********************************************************************8-->
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">Trouver un emploi</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">Ajouter un travail</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">Paramètres</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">Planche</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">Voir la carte</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">Entrer</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">Nous n'avons pas pu trouver d'emplois dans cette page spécifique. Notre système de détection automatique des tâches s'améliore tous les jours! Pour l'instant, vous pouvez ajouter un travail via le formulaire <b> AJOUTER DU TRAVAIL </b> manuellement.</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">Type de tableau</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Mon premier conseil</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">Type d'emploi</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Favoris</li>
+                            <li>Rejeté</li>
+                            <li>Appliqué</li>
+                            <li>Entretien</li>
+                            <li>Offre</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="Nom de la compagnie">
+                <input type="text" name="mj_jobtit" placeholder="Profession">
+                <input type="text" name="mj_loc" placeholder="Emplacement">
+                <input type="text" name="mj_url" placeholder="Publier l'URL">
+                <textarea name="mj_desc" placeholder="Description de l'emploi"></textarea>
+            </div>
+        </div>
+
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">Enregistrer le travail</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>Job ajouté</h3></div>
+        <div class="suw-desc">Votre Jobe a été ajouté avec succès! </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">Go Back</button><a href="" class="check-link">Découvrez votre tableau de bord!</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> Aller au tableau des utilisateurs</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> Connectez - Out</a>
+        </div>
+    </div>
+</div>
+
+
+<!--********************************************************************8-->
+                              <!--French End-->
+<!--********************************************************************8-->
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">البحث عن وظيفة</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">أضف الوظيفة</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">Settings</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">إعدادات</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">إعرض الخريطة</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">أدخل</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">لم نتمكن من العثور على وظائف في هذه الصفحة المحددة. لدينا نظام الكشف عن وظيفة التلقائي هو تحسين كل يوم! يمكنك الآن إضافة وظيفة من خلال النموذج <b> إضافة وظيفة </ b> يدويا.</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">نوع اللوحة</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>بلدي المجلس الأول</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">نوع الوظيفة</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>الأماني</li>
+                            <li>مرفوض</li>
+                            <li>مستعمل</li>
+                            <li>مقابلة</li>
+                            <li>عرض</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="اسم الشركة">
+                <input type="text" name="mj_jobtit" placeholder="المسمى الوظيفي">
+                <input type="text" name="mj_loc" placeholder="موقعك">
+                <input type="text" name="mj_url" placeholder="نشر عنوان ورل">
+                <textarea name="mj_desc" placeholder="المسمى الوظيفي"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">حفظ العمل</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>تمت إضافة وظيفة</h3></div>
+        <div class="suw-desc">تمت إضافة جوبي بنجاح! </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">عُد</button><a href="" class="check-link">تحقق من لوحة التحكم الخاصة بك!</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> انتقل إلى مجلس المستخدم</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> الخروج</a>
+        </div>
+    </div>
+</div>
+
+<!--********************************************************************8-->
+                              <!--Arabic End-->
+<!--********************************************************************8-->
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">Найти работу</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">Добавить работу</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">настройки</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">доска</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">Посмотреть карту</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">Залезай</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">Мы не смогли найти работу на этой конкретной странице. Наша автоматическая система обнаружения работы ежедневно улучшается! На данный момент вы можете добавить задание через форму <b> ДОБАВИТЬ РАБОТУ </b> вручную.</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">Тип платы</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Мой первый совет</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">Тип вакансии</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>добавить в корзину</li>
+                            <li>Отклонено</li>
+                            <li>прикладной</li>
+                            <li>Интервью</li>
+                            <li>Предлагает</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="название компании">
+                <input type="text" name="mj_jobtit" placeholder="Название работы">
+                <input type="text" name="mj_loc" placeholder="Место нахождения">
+                <input type="text" name="mj_url" placeholder="Почтовый URL">
+                <textarea name="mj_desc" placeholder="Описание вакансии"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">Сохранить вакансию</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>Добавлена ​​работа</h3></div>
+        <div class="suw-desc">Ваш Jobe был успешно добавлен!</div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">Возвращаться</button><a href="" class="check-link">Проверьте свою панель инструментов!</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i>Перейти к содержимому</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> Выйти</a>
+        </div>
+    </div>
+</div>
+
+<!--********************************************************************8-->
+                              <!--Russian End-->
+<!--********************************************************************8-->
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">Encontrar emprego</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">Adicionar trabalho</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">Configurações</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">Borda</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">Ver mapa</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">Entrar</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">Não encontramos emprego nesta página específica. Nosso sistema automático de detecção de trabalho está melhorando todos os dias! Por enquanto, você pode adicionar um trabalho através do formulário <b> ADICIONAR TRABALHO </b> manualmente.</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">Tipo de placa</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Meu primeiro conselho</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">Tipo de emprego</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Lista de Desejos</li>
+                            <li>Rejeitado</li>
+                            <li>Aplicado</li>
+                            <li>Entrevista</li>
+                            <li>Oferta</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="Nome da empresa">
+                <input type="text" name="mj_jobtit" placeholder="Titulo do trabalho">
+                <input type="text" name="mj_loc" placeholder="Localização">
+                <input type="text" name="mj_url" placeholder="URL do post">
+                <textarea name="mj_desc" placeholder="Descrição do trabalho"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">Salvar trabalho</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>Trabalho Adicionado</h3></div>
+        <div class="suw-desc">Seu Jobe foi adicionado com sucesso! </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">Go Back</button><a href="" class="check-link">Confira o seu painel de instrumentos!</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> Goto User Board</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> Sair</a>
+        </div>
+    </div>
+</div>
+
+
+<!--********************************************************************8-->
+                              <!--portugese End-->
+<!--********************************************************************8-->
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">চাকরী খোজা</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">কাজের যোগ করুন</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">সেটিংস</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">তক্তা</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">মানচিত্র দেখুন</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">ভিতরে আস</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">আমরা এই নির্দিষ্ট পৃষ্ঠায় কাজ খুঁজে পাইনি। আমাদের স্বয়ংক্রিয় কাজ সনাক্তকরণ সিস্টেম প্রতিদিন উন্নতি করছে! এখন আপনি <b> চাকরি যোগ করুন </b> ফর্মটি ম্যানুয়ালি মাধ্যমে একটি কাজের যোগ করতে পারেন।</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">বোর্ড প্রকার</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>আমার প্রথম বোর্ড</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">কাজের ধরন</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>ইচ্ছেতালিকা</li>
+                            <li>প্রত্যাখ্যাত</li>
+                            <li>ফলিত</li>
+                            <li>সাক্ষাত্কার</li>
+                            <li>প্রদান</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="কোমপানির নাম">
+                <input type="text" name="mj_jobtit" placeholder="কাজের শিরোনাম">
+                <input type="text" name="mj_loc" placeholder="অবস্থান">
+                <input type="text" name="mj_url" placeholder="URL পোস্ট করুন">
+                <textarea name="mj_desc" placeholder="কাজের বিবরণী"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">কাজ সংরক্ষণ করুন</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>কাজের যোগ করা হয়েছে</h3></div>
+        <div class="suw-desc">আপনার Jobe সফলভাবে যোগ করা হয়েছে! </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">Go Back</button><a href="" class="check-link">আপনার ড্যাশবোর্ড দেখুন!</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> গেট ইউজার বোর্ড</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> প্রস্থান</a>
+        </div>
+    </div>
+</div>
+
+<!--********************************************************************8-->
+                              <!--Bangla End-->
+<!--********************************************************************8-->
+
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">Vind een baan</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">Taak toevoegen</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">instellingen</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">Boord</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">Bekijk kaart</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">Stap in</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">We konden geen vacatures vinden op deze specifieke pagina. Ons automatische taakdetectiesysteem verbetert elke dag! Voor nu kun je een taak handmatig toevoegen via het <b> JOB TOEVOEGEN </b> -formulier.</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">Bordtype</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Mijn eerste bord</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">Soort baan</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>Verlanglijst</li>
+                            <li>Verworpen</li>
+                            <li>Toegepast</li>
+                            <li>Interview</li>
+                            <li>Aanbod</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="Bedrijfsnaam">
+                <input type="text" name="mj_jobtit" placeholder="Functietitel">
+                <input type="text" name="mj_loc" placeholder="Plaats">
+                <input type="text" name="mj_url" placeholder="URL plaatsen">
+                <textarea name="mj_desc" placeholder="Functieomschrijving"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">Opdracht opslaan</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>Job toegevoegd</h3></div>
+        <div class="suw-desc">Je Jobe is succesvol toegevoegd! </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">Go Back</button><a href="" class="check-link">Bekijk je Dashboard!</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> Ga naar gebruikersbord</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> Uitloggen</a>
+        </div>
+    </div>
+</div>
+
+<!--********************************************************************8-->
+                              <!--Dutch End-->
+<!--********************************************************************8-->
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">仕事を探す</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">ジョブを追加</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">設定</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">ボード</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">地図を見ます</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">入れ</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">私たちはこの特定のページで仕事を見つけることができませんでした。私たちの自動ジョブ検出システムは毎日改善しています！今のところ、[<b>ジョブを追加</ b>]フォームを使って手動でジョブを追加できます。</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">ボードタイプ</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>私の最初のボード</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">ジョブの種類</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>ウィッシュリスト</li>
+                            <li>拒否された</li>
+                            <li>適用された</li>
+                            <li>インタビュー</li>
+                            <li>提供</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="会社名">
+                <input type="text" name="mj_jobtit" placeholder="職名">
+                <input type="text" name="mj_loc" placeholder="ロケーション">
+                <input type="text" name="mj_url" placeholder="投稿URL">
+                <textarea name="mj_desc" placeholder="仕事内容"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">ジョブを保存する</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>追加されたジョブ</h3></div>
+        <div class="suw-desc">あなたのジョブは正常に追加されました！ </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">戻る</button><a href="" class="check-link">あなたのダッシュボードをチェックしてください！</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> ユーザボードに移動</a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> ログアウト</a>
+        </div>
+    </div>
+</div>
+
+<!--********************************************************************8-->
+                              <!--Japanese End-->
+<!--********************************************************************8-->
+
+<div class="job-form-wrap">
+    <div class="jfw-head row">
+        <div class="col-6 jfw-logo-sec"><img src="'+imgURL+'"></div>
+        <div class="col-6 jfw-close-sec"><i class="fa fa-times-circle"></i></div>
+    </div>
+    <div class="jfw-head-menu row">
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-globe jfwhm-sec-active"></i> <span class="label">직업 찾기</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-plus-circle"></i> <span class="label">작업 추가</span> </div>
+        <div class="col-2 jfwhm-sec tab-btn"> <i class="fa fa-cog"></i> <span class="label">설정</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-thumb-tack"></i> <span class="label">판</span> </div>
+        <div class="col-2 jfwhm-sec"> <i class="fa fa-map"></i> <span class="label">지도보기</span> </div>
+        <div class="col-2 jfwhm-sec"><a href="https://fiverr-projects.000webhostapp.com" /><i class="fa fa-user"></i> <span class="label">들어 오세요</span> </a>
+        </div>
+    </div>
+    <div class="jfw-jobs-lists tab-body">
+        <div class="jfw-no-job">이 특정 페이지에서 작업을 찾을 수 없습니다. 우리의 자동 작업 감지 시스템은 매일 개선되고 있습니다! 지금은 <b> 작업 추가 </b> 양식을 통해 수동으로 작업을 추가 할 수 있습니다.</div>
+        <div class="jfw-avail-job">
+            <div class="jfw-avail-job-wrap"> </div>
+        </div>
+    </div>
+    <form method="POST" class="mjob-add tab-body" id="mjob-add">
+        <div class="jfw-body">
+            <div class="jfw-body-wrap">
+                <div class="col-12 mj-error"></div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text bt-text">보드 유형</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>나의 첫 번째 게시판</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-select">
+                    <div class="my-select-wrap">
+                        <div class="my-selected-head"> <span class="mst-text jt-text">직업 종류</span> <i class="fa fa-angle-down"></i> </div>
+                        <div class="my-select-opts">
+                            <li>희망 목록</li>
+                            <li>거부 됨</li>
+                            <li>적용된</li>
+                            <li>회견</li>
+                            <li>제공</li>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="mj_cname" placeholder="회사 이름">
+                <input type="text" name="mj_jobtit" placeholder="직위">
+                <input type="text" name="mj_loc" placeholder="위치">
+                <input type="text" name="mj_url" placeholder="게시물 URL">
+                <textarea name="mj_desc" placeholder="업무 설명서"></textarea>
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" class="cus-btn cus-btn-blue mj-submit">작업 저장</button>
+        </div>
+    </form>
+    <div class="col-12 mj-added">
+        <div class="suw-head">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <h3>추가 된 직업</h3></div>
+        <div class="suw-desc">Jobe가 성공적으로 추가되었습니다! </div>
+        <div class="suw-foot">
+            <button class="cus-btn cus-btn-blue open-mj-add">돌아 가기</button><a href="" class="check-link">대시 보드를 확인하십시오!</a></div>
+    </div>
+    <div class="jfw-settings tab-body">
+        <div class="user-email"> <i class="fa fa-envelope"></i> antesoft17@outlook.com</div>
+        <div class="user-board">
+            <a href=""> <i class="fa fa-thumb-tack"></i> 사용자 보드로 이동 </a>
+        </div>
+        <div class="user-logout">
+            <a href=""> <i class="fa fa-user"></i> 로그 아웃 </a>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="plugins/jquery.js"></script>
+<script type="text/javascript" src="plugins/drag.js"></script>
+<script type="text/javascript" src="general_scripts.js"></script>
+
+</html>

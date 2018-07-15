@@ -1,0 +1,54 @@
+{
+	"name":"My Work Book",
+	"author" : "My Work Book",
+	"description":"Save & Manage Your Jobs with ease",
+	"version":"1.0",
+	"manifest_version":2,
+	"icons":{
+		"16":"icons/job_icon.png",
+		"32":"icons/job_icon.png",
+		"64":"icons/job_icon.png"
+	},
+	"browser_action":{
+		"default_icon":"icons/job_icon.png"
+	},
+	"content_scripts":[{
+		"matches":["<all_urls>"],
+		"css": [
+			"plugins/bootstrap.min.css",
+			"plugins/fa/css/font-awesome.css",
+			"style.css"
+		],
+		"js":[
+			"plugins/jquery.js",
+			"plugins/jquery.slimscroll.js",
+			"plugins/drag.js",
+			"general_scripts.js",
+			"content_scripts.js"
+		]
+	}],
+
+	
+
+	"web_accessible_resources": [
+		"Icons/*.png",
+		"Icons/*.svg",
+	    "plugins/fa/css/*.css",
+	    "plugins/fa/fonts/fontawesome-webfont.eot?v=4.7.0",
+		"plugins/fa/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0",
+	    "plugins/fa/fonts/fontawesome-webfont.woff2?v=4.7.0",
+	    "plugins/fa/fonts/fontawesome-webfont.woff?v=4.7.0",
+	    "plugins/fa/fonts/fontawesome-webfont.ttf?v=4.7.0",
+	    "plugins/fa/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular"
+	],
+
+	"permissions":[
+        "cookies",
+        "tabs",
+        "<all_urls>",
+        "https://stackoverflow.com/jobs",
+        "http://fontawesome.io/assets/font-awesome/*"
+	]
+	
+
+}

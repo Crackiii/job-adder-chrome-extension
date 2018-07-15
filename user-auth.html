@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Work Book | Auth</title>
+	<link rel="stylesheet" type="text/css" href="plugins/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="container">
+	<!--Sign up or login Start-->
+	<div class="user-auth">
+		<div class="user-auth-wrap">
+
+			<div class="col-sm-12 col-md-6 col-lg-4 user-form user-signup">
+				<div class="jfw-head row">
+					<div class="col-6 jfw-logo-sec">
+						<img src="icons/logo.svg">
+					</div>
+				</div>
+				<div class="user-form-head"> Create your Free Account </div>
+				<form method="POST" id="su_form">
+					<div class="col-12 su-error">  </div>
+					<input type="text" name="su-fname" placeholder="First Name" class="type-inp">
+					<input type="text" name="su-lname" placeholder="Last Name" class="type-inp">
+					<input type="Email" name="su-email" placeholder="Email Address" class="type-inp">
+					<input type="Password" name="su-pass" placeholder="Password" class="type-inp">
+					<input type="checkbox" name="su-check" value="su_check" id="su-checkbox">
+					<label for="su-checkbox" class="cus-cb-label">
+						<span class="cus-checkbox"> <i class="fa fa-check"></i> </span>
+						I am agree to the term of use and conditions
+					</label>
+					<input type="submit" name="su-submit" value="Sign Up" class="cus-btn cus-btn-blue su-submit">
+				</form>
+				<div class="account-ask">
+					Already have an account ? <a href="#" class="show-login">Login</a>
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-6 col-lg-4 user-form user-login">
+				<div class="jfw-head row">
+					<div class="col-6 jfw-logo-sec">
+						<img src="icons/logo.svg">
+					</div>
+				</div>
+				<div class="user-form-head"> Login to your account !</div>
+				<form method="POST" id="lg_form">
+					<div class="col-12 lg-error">  </div>
+					<input type="Email" name="lg-email" placeholder="Email Address" class="type-inp">
+					<input type="Password" name="lg-pass" placeholder="Password" class="type-inp">
+					<input type="submit" name="lg-submit"  value="Login" class="cus-btn cus-btn-blue lg-submit">
+				</form>
+				<div class="account-ask">
+					Don`t have an account ? <a href="#" class="show-signup">Sign Up</a>
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-6 col-lg-4 su-welcome">
+				<div class="suw-head">
+					<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+					<h3>Welcome Buddy !</h3>
+				</div>
+				<div class="suw-desc">
+					You are successfully In ! 
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-6 col-lg-4 lg-welcome">
+				<div class="suw-head">
+					<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+					<h3>Welcome Back!</h3>
+				</div>
+				<div class="suw-desc">
+					You are successfully In ! 
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--Sign up or login End-->
+</div>
+
+</body>
+<script type="text/javascript" src="plugins/jquery.js"></script>
+<script type="text/javascript" src="plugins/drag.js"></script>
+<script type="text/javascript" src="general_scripts.js"></script>
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+</script>
+</html>
